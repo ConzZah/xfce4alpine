@@ -1,5 +1,5 @@
 #!/bin/sh
-doas apk add curl && curl -s https://raw.githubusercontent.com/ConzZah/install_essentials4alpine/main/install_essentials4alpine.sh | sh
+doas apk add curl && doas curl -s https://raw.githubusercontent.com/ConzZah/install_essentials4alpine/main/install_essentials4alpine.sh | sh
 doas setup-xorg-base xfce4 lightdm-gtk-greeter xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme chromium xarchiver mousepad
 doas apk add elogind polkit-elogind
 doas setup-devd udev
