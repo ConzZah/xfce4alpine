@@ -1,13 +1,13 @@
 #!/bin/sh
 doas apk add wget && wget https://raw.githubusercontent.com/ConzZah/install_essentials4alpine/main/install_essentials4alpine.sh
 doas chmod +x install_essentials4alpine.sh; ./install_essentials4alpine.sh
-doas setup-xorg-base xfce4 lightdm-gtk-greeter xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme firefox xarchiver mousepad
-doas apk add elogind polkit-elogind
+doas setup-xorg-base xfce4 lightdm-gtk-greeter xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme adwaita-icon-theme firefox xarchiver mousepad 
+doas apk add dbus dbus-x11 elogind polkit-elogind
 doas setup-devd udev
 doas rc-update add dbus
-doas apk add pipewire wireplumber pipewire-pulse pipewire-alsa
+doas apk add pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 doas addgroup $USER audio
-doas apk add gvfs udisks2 ntfs-3g gvfs-dev gvfs-archive gvfs-dav gvfs-fuse gvfs-gphoto2 gvfs-avahi gvfs-smb 
+doas apk add gvfs udisks2 ntfs-3g gvfs-cdda gvfs-afp gvfs-goa gvfs-mtp gvfs-smb gvfs-lang gvfs-afc gvfs-nfs gvfs-dev gvfs-archive gvfs-dav gvfs-fuse gvfs-gphoto2 gvfs-avahi
 doas rc-update add lightdm
 doas rc-update add elogind
 doas rc-service lightdm start
