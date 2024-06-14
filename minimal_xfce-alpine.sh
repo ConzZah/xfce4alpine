@@ -11,5 +11,5 @@ doas apk add gvfs udisks2 ntfs-3g gvfs-cdda gvfs-afp gvfs-goa gvfs-mtp gvfs-smb 
 doas rc-update add lightdm
 doas rc-update add elogind
 doas rc-service lightdm start
-echo ""; echo "INSTALL DONE" echo ""; echo "[ PRESS ANY KEY TO REBOOT ]"; read -n 1 -s
+echo ""; echo "INSTALL DONE"; echo ""; echo "[ PRESS ANY KEY TO REBOOT ]"; read -n 1 -s
 doas reboot
