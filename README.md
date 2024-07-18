@@ -1,2 +1,3 @@
-# minimal_xfce-alpine
-minimal xfce install script 4 alpine
+# xfce4alpine
+
+minimal xfce setup script for alpine linux, enjoy :D 
