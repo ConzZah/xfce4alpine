@@ -15,6 +15,9 @@ doas setup-xorg-base xfce4 lightdm-gtk-greeter xfce4-terminal xfce4-screensaver 
 doas apk add pipewire pipewire-tools pipewire-pulse pipewire-alsa pipewire-jack wireplumber xfce4-pulseaudio-plugin pavucontrol; doas addgroup $USER audio
 doas apk add gnome-disk-utility e2fsprogs-extra gvfs udisks2 gvfs-cdda gvfs-afp gvfs-goa gvfs-mtp gvfs-smb gvfs-lang gvfs-afc gvfs-nfs gvfs-archive gvfs-dav gvfs-fuse gvfs-gphoto2 gvfs-avahi
 
+# add fonts:
+doas apk add fontconfig font-terminus font-inconsolata font-dejavu font-noto font-noto-cjk font-awesome font-noto-extra
+
 # add boot services:
 doas rc-update add elogind
 doas rc-update add lightdm
