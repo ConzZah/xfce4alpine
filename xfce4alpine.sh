@@ -3,13 +3,16 @@
 # get the basics
 doas apk upgrade -U
 doas apk add alpine-conf wget lsblk mount nano ntfs-3g 7zip fastfetch curl grep sed git openssh sudo man-pages mandoc bash bash-completion bash-doc python3 w3m w3m-image w3m-doc xz shadow
-doas apk add flatpak xdg-desktop-portal-gtk
+
+# setup flatpak
+doas apk add xdg-desktop-portal-gtk xdg-utils xdg-user-dirs flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # setup dbus, udev and xorg:
 doas apk add dbus dbus-x11
 doas rc-update add dbus
 doas setup-devd udev
-doas setup-xorg-base xfce4 lightdm-gtk-greeter xfce4-terminal xfce4-screensaver xfce4-screenshooter xfce-polkit elogind polkit-elogind adw-gtk3 adwaita-xfce-icon-theme adwaita-icon-theme firefox xarchiver mousepad 
+doas setup-xorg-base xfce4 lightdm-gtk-greeter xfce4-terminal xfce4-screensaver xfce4-screenshooter xfce-polkit elogind polkit-elogind adw-gtk3 adwaita-xfce-icon-theme adwaita-icon-theme falkon xarchiver mousepad 
 
 # add audio support and install additional packages:
 doas apk add pipewire pipewire-tools pipewire-pulse pipewire-alsa pipewire-jack wireplumber xfce4-pulseaudio-plugin pavucontrol; doas addgroup $USER audio; doas addgroup $USER video
