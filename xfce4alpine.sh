@@ -12,7 +12,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 doas apk add dbus dbus-x11
 doas rc-update add dbus
 doas setup-devd udev
-doas setup-xorg-base xfce4 lightdm-gtk-greeter xfce4-terminal xfce4-screensaver xfce4-screenshooter xfce-polkit elogind polkit-elogind adw-gtk3 adwaita-xfce-icon-theme adwaita-icon-theme falkon xarchiver mousepad 
+doas setup-xorg-base xfce4 lightdm-gtk-greeter xfce4-terminal xfce4-screensaver xfce4-screenshooter xfce-polkit elogind polkit-elogind adw-gtk3 adwaita-xfce-icon-theme adwaita-icon-theme dillo xarchiver mousepad 
 
 # add audio support and install additional packages:
 doas apk add pipewire pipewire-tools pipewire-pulse pipewire-alsa pipewire-jack wireplumber xfce4-pulseaudio-plugin pavucontrol; doas addgroup $USER audio; doas addgroup $USER video
