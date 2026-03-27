@@ -31,4 +31,4 @@ doas rc-update add elogind
 doas rc-update add lightdm
 doas rc-update add fuse
 
-echo -e "\n[ INSTALL DONE, PLEASE REBOOT!! ]\n"; exit
+printf "\n[ INSTALL DONE, PLEASE REBOOT!! ]\n\n"; exit
